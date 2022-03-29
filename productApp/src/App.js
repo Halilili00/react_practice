@@ -3,6 +3,9 @@ import React, { Component } from "react";
 import Navi from "./components/Navi"
 import CategoryList from "./components/CategoryList"
 import ProductList from "./components/ProductList"
+import { Route, Routes } from "react-router-dom";
+import NotFound from "./components/NotFound";
+import CartList from "./components/CartList";
 
 export default class App extends Component {
 
@@ -40,9 +43,9 @@ export default class App extends Component {
     this.setState({ cart: newCart })
   }
 
-  removeFromCart=(product)=>{
+  removeFromCart = (product) => {
     let newCart = this.state.cart.filter(c => c.product.productID !== product.productID)
-    this.setState({cart: newCart})
+    this.setState({ cart: newCart })
   }
 
   render() {
@@ -62,11 +65,22 @@ export default class App extends Component {
               info={categoryInfo} />
           </Grid>
           <Grid item xs={9}>
-            <ProductList
-              products={this.state.products}
-              currentCategory={this.state.currentCategory}
-              info={productInfo}
-              addToCart={this.addToCart} />
+            <Routes>
+              <Route path="/" element={
+                <ProductList
+                  products={this.state.products}
+                  currentCategory={this.state.currentCategory}
+                  info={productInfo}
+                  addToCart={this.addToCart} />
+              }/>
+              <Route path="/cart" element={
+                <CartList
+                  cart={this.state.cart}
+                  removeFromCart={this.removeFromCart}
+                  />
+              }/>
+              <Route path="*" element={<NotFound />} />
+            </Routes>
           </Grid>
         </Grid>
       </Grid>

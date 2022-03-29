@@ -1,8 +1,8 @@
 import { Grid } from "@mui/material";
 import React, { Component } from "react";
-import CategoryList from "./CategoryList";
-import Navi from "./Navi";
-import ProductList from "./ProductList";
+import Navi from "./components/Navi"
+import CategoryList from "./components/CategoryList"
+import ProductList from "./components/ProductList"
 
 export default class App extends Component {
 
@@ -40,6 +40,11 @@ export default class App extends Component {
     this.setState({ cart: newCart })
   }
 
+  removeFromCart=(product)=>{
+    let newCart = this.state.cart.filter(c => c.product.productID !== product.productID)
+    this.setState({cart: newCart})
+  }
+
   render() {
     let productInfo = { title: "Product list" };
     let categoryInfo = { title: "Category list" };
@@ -47,6 +52,7 @@ export default class App extends Component {
       <Grid container mr={5}>
         <Navi
           cart={this.state.cart}
+          removeFromCart={this.removeFromCart}
         />
         <Grid container ml={5} mr={5} mt={10}>
           <Grid item xs={3} paddingRight={5}>

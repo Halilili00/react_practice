@@ -1,6 +1,6 @@
 import {Grid, Toolbar, Typography, AppBar } from "@mui/material";
 import React, { Component } from "react";
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import CartSummary from "./CartSummary";
 
 export default class Navi extends Component {
 
@@ -14,7 +14,7 @@ export default class Navi extends Component {
                                 <Typography variant="h4">ProductApp</Typography>
                             </Grid>
                             <Grid item ml={5} sx={{ marginLeft: 'auto' }}>
-                                <ShoppingCartIcon fontSize="large"/>{this.props.cart.length}
+                                <CartSummary removeFromCart={this.props.removeFromCart} cart={this.props.cart}/>
                             </Grid>
                         </Grid>
                     </Toolbar>

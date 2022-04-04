@@ -31,7 +31,7 @@ export default class CartList extends Component {
                                     <TableCell>{cartItem.product.unitsInStock}</TableCell>
                                     <TableCell>{cartItem.quantity}</TableCell>
                                     <TableCell>
-                                        <Button color="warning" onClick={() => this.props.removeFromCart(cartItem.product)}>Delete</Button>
+                                        <Button color="warning" variant="outlined" onClick={() => this.props.removeFromCart(cartItem.product)}>Delete</Button>
                                     </TableCell>
                                 </TableRow>
                             ))}

@@ -11,11 +11,11 @@ export default class ProductList extends Component {
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
               <TableRow>
-                <TableCell variant='head'>#</TableCell>
-                <TableCell variant='head'>Product Name</TableCell>
-                <TableCell component="th">Unit Price</TableCell>
-                <TableCell component="th">Quantity Per Unit</TableCell>
-                <TableCell component="th">Units In Stock</TableCell>
+                <TableCell>#</TableCell>
+                <TableCell>Product Name</TableCell>
+                <TableCell>Unit Price</TableCell>
+                <TableCell>Quantity Per Unit</TableCell>
+                <TableCell>Units In Stock</TableCell>
                 <TableCell></TableCell>
               </TableRow>
             </TableHead>

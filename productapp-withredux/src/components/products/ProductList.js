@@ -7,8 +7,8 @@ import { Table } from 'reactstrap';
 
 const ProductList = (props) => {
   useEffect(() => {
-    props.actions.getProducts(props.currenCategory.categoryID);
-  })
+    props.actions.getProducts();
+  }, [])
 
   return (
     <div>

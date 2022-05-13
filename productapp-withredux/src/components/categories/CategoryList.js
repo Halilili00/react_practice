@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { Badge, ListGroup, ListGroupItem } from 'reactstrap'
 import { bindActionCreators } from 'redux'
 import { changeCategory, getCategories } from '../../redux/actions/categoryActions'
+import { getProducts } from '../../redux/actions/productActions'
 
 const CategoryList = (props) => {
     useEffect(() => (
@@ -11,6 +12,7 @@ const CategoryList = (props) => {
 
     const selectCategory = (category) => {
         props.actions.changeCategory(category)
+        props.actions.getProducts(category.categoryID)
     }
 
     return (
@@ -41,7 +43,8 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
     actions: {
         getCategories: bindActionCreators(getCategories, dispatch),
-        changeCategory: bindActionCreators(changeCategory, dispatch)
+        changeCategory: bindActionCreators(changeCategory, dispatch),
+        getProducts: bindActionCreators(getProducts, dispatch)
     }
 })
 

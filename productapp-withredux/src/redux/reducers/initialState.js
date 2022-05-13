@@ -1,4 +1,7 @@
-export default {
+const states = {
     currentCategory:{},
-    categories:[]
+    categories:[],
+    products:[]
 }
+
+export default states;

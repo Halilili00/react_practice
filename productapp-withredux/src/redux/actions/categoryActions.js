@@ -1,17 +1,17 @@
 import * as actions from "./actions"
 
-export function changeCategory(category) {
+export const changeCategory = (category) => {
     return { type: actions.change_category, payload: category }
 }
 
-export function getCategoriesSuccess(categories) {
+export const getCategoriesSuccess = (categories) => {
     return { type: actions.get_categories_succes, payload: categories }
 }
 
-export function getCategories() {
-    return async (dispatch)  => {
+export const getCategories = () => {
+    return (dispatch) => {
         let url = "http://localhost:3000/categories"
-        return fetch(url).then(response => response.json())
+        fetch(url).then(response => response.json())
             .then(data => dispatch(getCategoriesSuccess(data)))
     }
 }

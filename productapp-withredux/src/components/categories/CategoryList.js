@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
-import { ListGroup, ListGroupItem } from 'reactstrap'
+import { Badge, ListGroup, ListGroupItem } from 'reactstrap'
 import { bindActionCreators } from 'redux'
 import { changeCategory, getCategories } from '../../redux/actions/categoryActions'
 
@@ -9,17 +9,26 @@ const CategoryList = (props) => {
         props.actions.getCategories()
     ), [])
 
+    const selectCategory = (category) => {
+        props.actions.changeCategory(category)
+    }
+
     return (
         <div>
-            <h3>Categories {props.categories.length}</h3>
+            <h3>
+                <Badge color='success'>Categories</Badge>
+            </h3>
             <ListGroup>
                 {props.categories.map(category => (
-                    <ListGroupItem onClick={() => props.actions.changeCategory(category)} key={category.categoryID}>
+                    <ListGroupItem
+                        active={category.categoryID === props.currenCategory.categoryID}
+                        onClick={() => selectCategory(category)}
+                        key={category.categoryID}
+                    >
                         {category.name}
                     </ListGroupItem>
                 ))}
             </ListGroup>
-            <h5>Secili kategori: {props.currenCategory.name}</h5>
         </div>
     )
 }

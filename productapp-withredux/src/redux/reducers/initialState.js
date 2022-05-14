@@ -1,7 +1,8 @@
 const states = {
     currentCategory:{},
     categories:[],
-    products:[]
+    products:[],
+    cart:[]
 }
 
 export default states;

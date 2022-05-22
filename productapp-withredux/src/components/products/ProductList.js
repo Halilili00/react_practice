@@ -1,19 +1,23 @@
 import React, { useEffect } from 'react'
-import { connect } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { Badge } from 'reactstrap'
-import { bindActionCreators } from 'redux'
 import { getProducts } from '../../redux/actions/productActions'
 import { Table, Button } from 'reactstrap';
 import { addToCart } from '../../redux/actions/cartActions'
-import alertify from 'alertifyjs'
+import alertify from "alertifyjs";
 
-const ProductList = (props) => {
+const ProductList = () => {
+  const currenCategory = useSelector(state => state.changeCategoryReducer);
+  const products = useSelector(state => state.productListReducer);
+
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    props.actions.getProducts();
+    dispatch(getProducts());
   }, [])
 
-  const addToCart = (product) => {
-    props.actions.addToCart({quantity:1,product})
+  const addItem = (product) => {
+    dispatch(addToCart({quantity:1,product}))
     alertify.success(product.name + " is added in cart")
   }
 
@@ -25,7 +29,7 @@ const ProductList = (props) => {
         </Badge>
         -
         <Badge>
-          {props.currenCategory.name}
+          {currenCategory.name}
         </Badge>
       </h3>
       <Table>
@@ -40,7 +44,7 @@ const ProductList = (props) => {
           </tr>
         </thead>
         <tbody>
-          {props.products.map(product => (
+          {products.map(product => (
             <tr key={product.productID}>
               <th scope="row">{product.productID}</th>
               <td>{product.name}</td>
@@ -48,7 +52,7 @@ const ProductList = (props) => {
               <td>{product.quantityPerUnit}</td>
               <td>{product.unitsInStock}</td>
               <td>
-                <Button onClick={() => addToCart(product)} >Add</Button>
+                <Button onClick={() => addItem(product)} >Add</Button>
               </td>
             </tr>
           ))}
@@ -58,16 +62,4 @@ const ProductList = (props) => {
   )
 }
 
-const mapStateToProps = (state) => ({
-  currenCategory: state.changeCategoryReducer,
-  products: state.productListReducer
-})
-
-const mapDispatchToProps = (dispatch) => ({
-  actions: {
-    getProducts: bindActionCreators(getProducts, dispatch),
-    addToCart: bindActionCreators(addToCart, dispatch)
-  }
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(ProductList)
+export default ProductList

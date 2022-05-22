@@ -1,6 +1,7 @@
 import alertify from 'alertifyjs';
 import React from 'react'
-import { connect } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import {
     UncontrolledDropdown,
     DropdownToggle,
@@ -10,13 +11,15 @@ import {
     NavLink,
     Badge
 } from 'reactstrap';
-import { bindActionCreators } from 'redux';
 import { removeFromCart } from '../../redux/actions/cartActions';
 
-const CartSummery = (props) => {
+const CartSummery = () => {
+    const cart = useSelector(state => state.cartReducer)
 
-    const removeFromCart = (cartItem) => {
-        props.actions.removeFromCart(cartItem)
+    const dispatch = useDispatch()
+
+    const deleteItem = (cartItem) => {
+        dispatch(removeFromCart(cartItem))
         alertify.error(cartItem.product.name + " is deleted")
     }
 
@@ -38,14 +41,16 @@ const CartSummery = (props) => {
                 </DropdownToggle>
                 <DropdownMenu end>
                     {
-                        props.cart.map(cartItem => (
+                        cart.map(cartItem => (
                             <DropdownItem key={cartItem.product.productID}>
-                                <Badge color='danger' onClick={() => removeFromCart(cartItem)}>Delete</Badge>
+                                <Badge color='danger' onClick={() => deleteItem(cartItem)}>Delete</Badge>
                                 {cartItem.product.name}
                                 <Badge color='success'>{cartItem.quantity}</Badge>
                             </DropdownItem>
                         ))
                     }
+                    <DropdownItem divider />
+                    <DropdownItem><Link to={"/cart"}>Cart detail</Link></DropdownItem>
                 </DropdownMenu>
             </UncontrolledDropdown>
         )
@@ -53,19 +58,9 @@ const CartSummery = (props) => {
 
     return (
         <div>
-            {props.cart.length > 0 ? renderSummery() : renderEmpty()}
+            {cart.length > 0 ? renderSummery() : renderEmpty()}
         </div>
     )
 }
 
-const mapStateToProps = (state) => ({
-    cart: state.cartReducer
-})
-
-const mapDispatchToProps = (dispatch) => ({
-    actions:{
-        removeFromCart: bindActionCreators(removeFromCart, dispatch)
-    }
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(CartSummery)
+export default CartSummery

@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "productID": 4,
+      "id": 4,
       "supplierID": 2,
       "categoryID": 2,
       "quantityPerUnit": "48 - 6 oz jars",
@@ -13,19 +13,19 @@
       "name": "Chef Anton's Cajun Seasoning"
     },
     {
-      "productID": 5,
+      "id": 5,
       "supplierID": 2,
       "categoryID": 2,
       "quantityPerUnit": "36 boxes",
       "unitPrice": 21.35,
-      "unitsInStock": 0,
+      "unitsInStock": "15",
       "unitsOnOrder": 0,
       "reorderLevel": 0,
       "discontinued": true,
       "name": "Chef Anton's Gumbo Mix"
     },
     {
-      "productID": 6,
+      "id": 6,
       "supplierID": 3,
       "categoryID": 2,
       "quantityPerUnit": "12 - 8 oz jars",
@@ -37,7 +37,7 @@
       "name": "Grandma's Boysenberry Spread"
     },
     {
-      "productID": 7,
+      "id": 7,
       "supplierID": 3,
       "categoryID": 7,
       "quantityPerUnit": "12 - 1 lb pkgs.",
@@ -49,7 +49,7 @@
       "name": "Uncle Bob's Organic Dried Pears"
     },
     {
-      "productID": 8,
+      "id": 8,
       "supplierID": 3,
       "categoryID": 2,
       "quantityPerUnit": "12 - 12 oz jars",
@@ -61,7 +61,7 @@
       "name": "Northwoods Cranberry Sauce"
     },
     {
-      "productID": 9,
+      "id": 9,
       "supplierID": 4,
       "categoryID": 6,
       "quantityPerUnit": "18 - 500 g pkgs.",
@@ -73,7 +73,7 @@
       "name": "Mishi Kobe Niku"
     },
     {
-      "productID": 10,
+      "id": 10,
       "supplierID": 4,
       "categoryID": 8,
       "quantityPerUnit": "12 - 200 ml jars",
@@ -85,7 +85,7 @@
       "name": "Ikura"
     },
     {
-      "productID": 2,
+      "id": 2,
       "supplierID": 1,
       "categoryID": 1,
       "quantityPerUnit": "24 - 12 oz bottles",
@@ -97,7 +97,7 @@
       "name": "Chang"
     },
     {
-      "productID": 3,
+      "id": 3,
       "supplierID": 1,
       "categoryID": 2,
       "quantityPerUnit": "12 - 550 ml bottles",
@@ -109,7 +109,7 @@
       "name": "Aniseed Syrup"
     },
     {
-      "productID": 11,
+      "id": 11,
       "supplierID": 5,
       "categoryID": 4,
       "quantityPerUnit": "1 kg pkg.",
@@ -121,7 +121,7 @@
       "name": "Queso Cabrales"
     },
     {
-      "productID": 12,
+      "id": 12,
       "supplierID": 5,
       "categoryID": 4,
       "quantityPerUnit": "10 - 500 g pkgs.",
@@ -133,7 +133,7 @@
       "name": "Queso Manchego La Pastora"
     },
     {
-      "productID": 13,
+      "id": 13,
       "supplierID": 6,
       "categoryID": 8,
       "quantityPerUnit": "2 kg box",
@@ -145,7 +145,7 @@
       "name": "Konbu"
     },
     {
-      "productID": 14,
+      "id": 14,
       "supplierID": 6,
       "categoryID": 7,
       "quantityPerUnit": "40 - 100 g pkgs.",
@@ -157,7 +157,7 @@
       "name": "Tofu"
     },
     {
-      "productID": 15,
+      "id": 15,
       "supplierID": 6,
       "categoryID": 2,
       "quantityPerUnit": "24 - 250 ml bottles",
@@ -169,7 +169,7 @@
       "name": "Genen Shouyu"
     },
     {
-      "productID": 1,
+      "id": 1,
       "supplierID": 1,
       "categoryID": 1,
       "quantityPerUnit": "10 boxes x 20 bags",
@@ -181,7 +181,7 @@
       "name": "Chai"
     },
     {
-      "productID": 16,
+      "id": 16,
       "supplierID": 7,
       "categoryID": 3,
       "quantityPerUnit": "32 - 500 g boxes",
@@ -193,7 +193,7 @@
       "name": "Pavlova"
     },
     {
-      "productID": 17,
+      "id": 17,
       "supplierID": 7,
       "categoryID": 6,
       "quantityPerUnit": "20 - 1 kg tins",
@@ -205,7 +205,7 @@
       "name": "Alice Mutton"
     },
     {
-      "productID": 18,
+      "id": 18,
       "supplierID": 7,
       "categoryID": 8,
       "quantityPerUnit": "16 kg pkg.",
@@ -217,7 +217,7 @@
       "name": "Carnarvon Tigers"
     },
     {
-      "productID": 19,
+      "id": 19,
       "supplierID": 8,
       "categoryID": 3,
       "quantityPerUnit": "10 boxes x 12 pieces",
@@ -229,7 +229,7 @@
       "name": "Teatime Chocolate Biscuits"
     },
     {
-      "productID": 20,
+      "id": 20,
       "supplierID": 8,
       "categoryID": 3,
       "quantityPerUnit": "30 gift boxes",
@@ -241,7 +241,7 @@
       "name": "Sir Rodney's Marmalade"
     },
     {
-      "productID": 24,
+      "id": 24,
       "supplierID": 10,
       "categoryID": 1,
       "quantityPerUnit": "12 - 355 ml cans",
@@ -250,10 +250,10 @@
       "unitsOnOrder": 0,
       "reorderLevel": 0,
       "discontinued": true,
-      "name": "Guaraná Fantástica"
+      "name": "GuaranÃ¡ FantÃ¡stica"
     },
     {
-      "productID": 25,
+      "id": 25,
       "supplierID": 11,
       "categoryID": 3,
       "quantityPerUnit": "20 - 450 g glasses",
@@ -262,10 +262,10 @@
       "unitsOnOrder": 0,
       "reorderLevel": 30,
       "discontinued": false,
-      "name": "NuNuCa Nuß-Nougat-Creme"
+      "name": "NuNuCa NuÃŸ-Nougat-Creme"
     },
     {
-      "productID": 26,
+      "id": 26,
       "supplierID": 11,
       "categoryID": 3,
       "quantityPerUnit": "100 - 250 g bags",
@@ -274,10 +274,10 @@
       "unitsOnOrder": 0,
       "reorderLevel": 0,
       "discontinued": false,
-      "name": "Gumbär Gummibärchen"
+      "name": "GumbÃ¤r GummibÃ¤rchen"
     },
     {
-      "productID": 27,
+      "id": 27,
       "supplierID": 11,
       "categoryID": 3,
       "quantityPerUnit": "100 - 100 g pieces",
@@ -289,7 +289,7 @@
       "name": "Schoggi Schokolade"
     },
     {
-      "productID": 28,
+      "id": 28,
       "supplierID": 12,
       "categoryID": 7,
       "quantityPerUnit": "25 - 825 g cans",
@@ -298,10 +298,10 @@
       "unitsOnOrder": 0,
       "reorderLevel": 0,
       "discontinued": true,
-      "name": "Rössle Sauerkraut"
+      "name": "RÃ¶ssle Sauerkraut"
     },
     {
-      "productID": 29,
+      "id": 29,
       "supplierID": 12,
       "categoryID": 6,
       "quantityPerUnit": "50 bags x 30 sausgs.",
@@ -310,10 +310,10 @@
       "unitsOnOrder": 0,
       "reorderLevel": 0,
       "discontinued": true,
-      "name": "Thüringer Rostbratwurst"
+      "name": "ThÃ¼ringer Rostbratwurst"
     },
     {
-      "productID": 30,
+      "id": 30,
       "supplierID": 13,
       "categoryID": 8,
       "quantityPerUnit": "10 - 200 g glasses",
@@ -325,7 +325,7 @@
       "name": "Nord-Ost Matjeshering"
     },
     {
-      "productID": 31,
+      "id": 31,
       "supplierID": 14,
       "categoryID": 4,
       "quantityPerUnit": "12 - 100 g pkgs",
@@ -337,7 +337,7 @@
       "name": "Gorgonzola Telino"
     },
     {
-      "productID": 32,
+      "id": 32,
       "supplierID": 14,
       "categoryID": 4,
       "quantityPerUnit": "24 - 200 g pkgs.",
@@ -349,7 +349,7 @@
       "name": "Mascarpone Fabioli"
     },
     {
-      "productID": 33,
+      "id": 33,
       "supplierID": 15,
       "categoryID": 4,
       "quantityPerUnit": "500 g",
@@ -361,7 +361,7 @@
       "name": "Geitost"
     },
     {
-      "productID": 34,
+      "id": 34,
       "supplierID": 16,
       "categoryID": 1,
       "quantityPerUnit": "24 - 12 oz bottles",
@@ -373,7 +373,7 @@
       "name": "Sasquatch Ale"
     },
     {
-      "productID": 22,
+      "id": 22,
       "supplierID": 9,
       "categoryID": 5,
       "quantityPerUnit": "24 - 500 g pkgs.",
@@ -382,10 +382,10 @@
       "unitsOnOrder": 0,
       "reorderLevel": 25,
       "discontinued": false,
-      "name": "Gustaf's Knäckebröd"
+      "name": "Gustaf's KnÃ¤ckebrÃ¶d"
     },
     {
-      "productID": 21,
+      "id": 21,
       "supplierID": 8,
       "categoryID": 3,
       "quantityPerUnit": "24 pkgs. x 4 pieces",
@@ -397,7 +397,7 @@
       "name": "Sir Rodney's Scones"
     },
     {
-      "productID": 35,
+      "id": 35,
       "supplierID": 16,
       "categoryID": 1,
       "quantityPerUnit": "24 - 12 oz bottles",
@@ -409,7 +409,7 @@
       "name": "Steeleye Stout"
     },
     {
-      "productID": 23,
+      "id": 23,
       "supplierID": 9,
       "categoryID": 5,
       "quantityPerUnit": "12 - 250 g pkgs.",
@@ -418,10 +418,10 @@
       "unitsOnOrder": 0,
       "reorderLevel": 25,
       "discontinued": false,
-      "name": "Tunnbröd"
+      "name": "TunnbrÃ¶d"
     },
     {
-      "productID": 37,
+      "id": 37,
       "supplierID": 17,
       "categoryID": 8,
       "quantityPerUnit": "12 - 500 g pkgs.",
@@ -433,7 +433,7 @@
       "name": "Gravad lax"
     },
     {
-      "productID": 40,
+      "id": 40,
       "supplierID": 19,
       "categoryID": 8,
       "quantityPerUnit": "24 - 4 oz tins",
@@ -445,7 +445,7 @@
       "name": "Boston Crab Meat"
     },
     {
-      "productID": 38,
+      "id": 38,
       "supplierID": 18,
       "categoryID": 1,
       "quantityPerUnit": "12 - 75 cl bottles",
@@ -454,10 +454,10 @@
       "unitsOnOrder": 0,
       "reorderLevel": 15,
       "discontinued": false,
-      "name": "Côte de Blaye"
+      "name": "CÃ´te de Blaye"
     },
     {
-      "productID": 36,
+      "id": 36,
       "supplierID": 17,
       "categoryID": 8,
       "quantityPerUnit": "24 - 250 g  jars",
@@ -469,7 +469,7 @@
       "name": "Inlagd Sill"
     },
     {
-      "productID": 41,
+      "id": 41,
       "supplierID": 19,
       "categoryID": 8,
       "quantityPerUnit": "12 - 12 oz cans",
@@ -481,7 +481,7 @@
       "name": "Jack's New England Clam Chowder"
     },
     {
-      "productID": 43,
+      "id": 43,
       "supplierID": 20,
       "categoryID": 1,
       "quantityPerUnit": "16 - 500 g tins",
@@ -493,7 +493,7 @@
       "name": "Ipoh Coffee"
     },
     {
-      "productID": 42,
+      "id": 42,
       "supplierID": 20,
       "categoryID": 5,
       "quantityPerUnit": "32 - 1 kg pkgs.",
@@ -505,7 +505,7 @@
       "name": "Singaporean Hokkien Fried Mee"
     },
     {
-      "productID": 46,
+      "id": 46,
       "supplierID": 21,
       "categoryID": 8,
       "quantityPerUnit": "4 - 450 g glasses",
@@ -517,7 +517,7 @@
       "name": "Spegesild"
     },
     {
-      "productID": 47,
+      "id": 47,
       "supplierID": 22,
       "categoryID": 3,
       "quantityPerUnit": "10 - 4 oz boxes",
@@ -529,7 +529,7 @@
       "name": "Zaanse koeken"
     },
     {
-      "productID": 48,
+      "id": 48,
       "supplierID": 22,
       "categoryID": 3,
       "quantityPerUnit": "10 pkgs.",
@@ -541,7 +541,7 @@
       "name": "Chocolade"
     },
     {
-      "productID": 49,
+      "id": 49,
       "supplierID": 23,
       "categoryID": 3,
       "quantityPerUnit": "24 - 50 g pkgs.",
@@ -553,7 +553,7 @@
       "name": "Maxilaku"
     },
     {
-      "productID": 50,
+      "id": 50,
       "supplierID": 23,
       "categoryID": 3,
       "quantityPerUnit": "12 - 100 g bars",
@@ -565,7 +565,7 @@
       "name": "Valkoinen suklaa"
     },
     {
-      "productID": 51,
+      "id": 51,
       "supplierID": 24,
       "categoryID": 7,
       "quantityPerUnit": "50 - 300 g pkgs.",
@@ -577,7 +577,7 @@
       "name": "Manjimup Dried Apples"
     },
     {
-      "productID": 52,
+      "id": 52,
       "supplierID": 24,
       "categoryID": 5,
       "quantityPerUnit": "16 - 2 kg boxes",
@@ -589,7 +589,7 @@
       "name": "Filo Mix"
     },
     {
-      "productID": 53,
+      "id": 53,
       "supplierID": 24,
       "categoryID": 6,
       "quantityPerUnit": "48 pieces",
@@ -601,7 +601,7 @@
       "name": "Perth Pasties"
     },
     {
-      "productID": 54,
+      "id": 54,
       "supplierID": 25,
       "categoryID": 6,
       "quantityPerUnit": "16 pies",
@@ -610,10 +610,10 @@
       "unitsOnOrder": 0,
       "reorderLevel": 10,
       "discontinued": false,
-      "name": "Tourtière"
+      "name": "TourtiÃ¨re"
     },
     {
-      "productID": 55,
+      "id": 55,
       "supplierID": 25,
       "categoryID": 6,
       "quantityPerUnit": "24 boxes x 2 pies",
@@ -622,10 +622,10 @@
       "unitsOnOrder": 0,
       "reorderLevel": 20,
       "discontinued": false,
-      "name": "Pâté chinois"
+      "name": "PÃ¢tÃ© chinois"
     },
     {
-      "productID": 56,
+      "id": 56,
       "supplierID": 26,
       "categoryID": 5,
       "quantityPerUnit": "24 - 250 g pkgs.",
@@ -637,7 +637,7 @@
       "name": "Gnocchi di nonna Alice"
     },
     {
-      "productID": 57,
+      "id": 57,
       "supplierID": 26,
       "categoryID": 5,
       "quantityPerUnit": "24 - 250 g pkgs.",
@@ -649,7 +649,7 @@
       "name": "Ravioli Angelo"
     },
     {
-      "productID": 44,
+      "id": 44,
       "supplierID": 20,
       "categoryID": 2,
       "quantityPerUnit": "20 - 2 kg bags",
@@ -661,7 +661,7 @@
       "name": "Gula Malacca"
     },
     {
-      "productID": 39,
+      "id": 39,
       "supplierID": 18,
       "categoryID": 1,
       "quantityPerUnit": "750 cc per bottle",
@@ -673,7 +673,7 @@
       "name": "Chartreuse verte"
     },
     {
-      "productID": 59,
+      "id": 59,
       "supplierID": 28,
       "categoryID": 4,
       "quantityPerUnit": "5 kg pkg.",
@@ -685,7 +685,7 @@
       "name": "Raclette Courdavault"
     },
     {
-      "productID": 60,
+      "id": 60,
       "supplierID": 28,
       "categoryID": 4,
       "quantityPerUnit": "15 - 300 g rounds",
@@ -697,7 +697,7 @@
       "name": "Camembert Pierrot"
     },
     {
-      "productID": 45,
+      "id": 45,
       "supplierID": 21,
       "categoryID": 8,
       "quantityPerUnit": "1k pkg.",
@@ -709,7 +709,7 @@
       "name": "Rogede sild"
     },
     {
-      "productID": 58,
+      "id": 58,
       "supplierID": 27,
       "categoryID": 8,
       "quantityPerUnit": "24 pieces",
@@ -721,7 +721,7 @@
       "name": "Escargots de Bourgogne"
     },
     {
-      "productID": 61,
+      "id": 61,
       "supplierID": 29,
       "categoryID": 2,
       "quantityPerUnit": "24 - 500 ml bottles",
@@ -730,10 +730,10 @@
       "unitsOnOrder": 0,
       "reorderLevel": 25,
       "discontinued": false,
-      "name": "Sirop d'érable"
+      "name": "Sirop d'Ã©rable"
     },
     {
-      "productID": 62,
+      "id": 62,
       "supplierID": 29,
       "categoryID": 3,
       "quantityPerUnit": "48 pies",
@@ -745,7 +745,7 @@
       "name": "Tarte au sucre"
     },
     {
-      "productID": 63,
+      "id": 63,
       "supplierID": 7,
       "categoryID": 2,
       "quantityPerUnit": "15 - 625 g jars",
@@ -757,7 +757,7 @@
       "name": "Vegie-spread"
     },
     {
-      "productID": 64,
+      "id": 64,
       "supplierID": 12,
       "categoryID": 5,
       "quantityPerUnit": "20 bags x 4 pieces",
@@ -766,10 +766,10 @@
       "unitsOnOrder": 80,
       "reorderLevel": 30,
       "discontinued": false,
-      "name": "Wimmers gute Semmelknödel"
+      "name": "Wimmers gute SemmelknÃ¶del"
     },
     {
-      "productID": 65,
+      "id": 65,
       "supplierID": 2,
       "categoryID": 2,
       "quantityPerUnit": "32 - 8 oz bottles",
@@ -781,7 +781,7 @@
       "name": "Louisiana Fiery Hot Pepper Sauce"
     },
     {
-      "productID": 66,
+      "id": 66,
       "supplierID": 2,
       "categoryID": 2,
       "quantityPerUnit": "24 - 8 oz jars",
@@ -793,7 +793,7 @@
       "name": "Louisiana Hot Spiced Okra"
     },
     {
-      "productID": 67,
+      "id": 67,
       "supplierID": 16,
       "categoryID": 1,
       "quantityPerUnit": "24 - 12 oz bottles",
@@ -805,7 +805,7 @@
       "name": "Laughing Lumberjack Lager"
     },
     {
-      "productID": 68,
+      "id": 68,
       "supplierID": 8,
       "categoryID": 3,
       "quantityPerUnit": "10 boxes x 8 pieces",
@@ -817,7 +817,7 @@
       "name": "Scottish Longbreads"
     },
     {
-      "productID": 70,
+      "id": 70,
       "supplierID": 7,
       "categoryID": 1,
       "quantityPerUnit": "24 - 355 ml bottles",
@@ -829,7 +829,7 @@
       "name": "Outback Lager"
     },
     {
-      "productID": 71,
+      "id": 71,
       "supplierID": 15,
       "categoryID": 4,
       "quantityPerUnit": "10 - 500 g pkgs.",
@@ -841,7 +841,7 @@
       "name": "Flotemysost"
     },
     {
-      "productID": 73,
+      "id": 73,
       "supplierID": 17,
       "categoryID": 8,
       "quantityPerUnit": "24 - 150 g jars",
@@ -850,10 +850,10 @@
       "unitsOnOrder": 0,
       "reorderLevel": 5,
       "discontinued": false,
-      "name": "Röd Kaviar"
+      "name": "RÃ¶d Kaviar"
     },
     {
-      "productID": 74,
+      "id": 74,
       "supplierID": 4,
       "categoryID": 7,
       "quantityPerUnit": "5 kg pkg.",
@@ -865,7 +865,7 @@
       "name": "Longlife Tofu"
     },
     {
-      "productID": 75,
+      "id": 75,
       "supplierID": 12,
       "categoryID": 1,
       "quantityPerUnit": "24 - 0.5 l bottles",
@@ -874,10 +874,10 @@
       "unitsOnOrder": 0,
       "reorderLevel": 25,
       "discontinued": false,
-      "name": "Rhönbräu Klosterbier"
+      "name": "RhÃ¶nbrÃ¤u Klosterbier"
     },
     {
-      "productID": 76,
+      "id": 76,
       "supplierID": 23,
       "categoryID": 1,
       "quantityPerUnit": "500 ml",
@@ -886,10 +886,10 @@
       "unitsOnOrder": 0,
       "reorderLevel": 20,
       "discontinued": false,
-      "name": "Lakkalikööri"
+      "name": "LakkalikÃ¶Ã¶ri"
     },
     {
-      "productID": 69,
+      "id": 69,
       "supplierID": 15,
       "categoryID": 4,
       "quantityPerUnit": "10 kg pkg.",
@@ -901,7 +901,7 @@
       "name": "Gudbrandsdalsost"
     },
     {
-      "productID": 72,
+      "id": 72,
       "supplierID": 14,
       "categoryID": 4,
       "quantityPerUnit": "24 - 200 g pkgs.",
@@ -913,7 +913,7 @@
       "name": "Mozzarella di Giovanni"
     },
     {
-      "productID": 77,
+      "id": 77,
       "supplierID": 12,
       "categoryID": 2,
       "quantityPerUnit": "12 boxes",
@@ -922,7 +922,39 @@
       "unitsOnOrder": 0,
       "reorderLevel": 15,
       "discontinued": false,
-      "name": "Original Frankfurter grüne Soße"
+      "name": "Original Frankfurter grÃ¼ne SoÃŸe"
+    },
+    {
+      "categoryID": 2,
+      "name": "Colo-colo",
+      "unitPrice": "5",
+      "quantityPerUnit": "200 g",
+      "unitsInStock": "15",
+      "id": 78
+    },
+    {
+      "categoryID": 2,
+      "name": "Kecap manis",
+      "unitPrice": "7.99",
+      "quantityPerUnit": "100 ml",
+      "unitsInStock": "9",
+      "id": 79
+    },
+    {
+      "categoryID": 1,
+      "name": "Americano",
+      "quantityPerUnit": "254 g",
+      "unitPrice": "5.60",
+      "unitsInStock": "10",
+      "id": 80
+    },
+    {
+      "categoryID": 1,
+      "name": "Cortado",
+      "unitPrice": "6.75",
+      "quantityPerUnit": "100 g",
+      "unitsInStock": "6",
+      "id": 81
     }
   ],
   "categories": [

@@ -2,7 +2,7 @@ const states = {
     currentCategory:{},
     categories:[],
     products:[],
-    cart:[]
+    cart:[],
 }
 
 export default states;

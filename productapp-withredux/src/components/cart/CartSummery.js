@@ -42,7 +42,7 @@ const CartSummery = () => {
                 <DropdownMenu end>
                     {
                         cart.map(cartItem => (
-                            <DropdownItem key={cartItem.product.productID}>
+                            <DropdownItem key={cartItem.product.id}>
                                 <Badge color='danger' onClick={() => deleteItem(cartItem)}>Delete</Badge>
                                 {cartItem.product.name}
                                 <Badge color='success'>{cartItem.quantity}</Badge>

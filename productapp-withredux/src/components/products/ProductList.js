@@ -5,6 +5,7 @@ import { getProducts } from '../../redux/actions/productActions'
 import { Table, Button } from 'reactstrap';
 import { addToCart } from '../../redux/actions/cartActions'
 import alertify from "alertifyjs";
+import { Link } from 'react-router-dom';
 
 const ProductList = () => {
   const currenCategory = useSelector(state => state.changeCategoryReducer);
@@ -45,9 +46,9 @@ const ProductList = () => {
         </thead>
         <tbody>
           {products.map(product => (
-            <tr key={product.productID}>
-              <th scope="row">{product.productID}</th>
-              <td>{product.name}</td>
+            <tr key={product.id}>
+              <th scope="row">{product.id}</th>
+              <td><Link to={"/add/"+product.id}>{product.name}</Link></td>
               <td>{product.unitPrice}</td>
               <td>{product.quantityPerUnit}</td>
               <td>{product.unitsInStock}</td>

@@ -10,7 +10,7 @@ const AddOrUpdateProduct = () => {
     const [postProduct, setpostProduct] = useState({})
     const categories = useSelector((state) => state.categoryListReducer);
     const param = useParams()
-    const product = useSelector(state => param.productId ? state.productListReducer.find(p => p.id == param.productId) : null);
+    const product = useSelector(state => param.productId ? state.productListReducer.products.find(p => p.id == param.productId) : null);
     const dispatch = useDispatch();
 
     useEffect(() => {

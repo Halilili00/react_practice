@@ -14,7 +14,8 @@ import {
 import { removeFromCart } from '../../redux/actions/cartActions';
 
 const CartSummery = () => {
-    const cart = useSelector(state => state.cartReducer)
+    const cart = useSelector(state => state.cartReducer.cart)
+    const totalSum = useSelector(state => state.cartReducer.totalSum)
 
     const dispatch = useDispatch()
 
@@ -35,7 +36,7 @@ const CartSummery = () => {
 
     const renderSummery = () => {
         return (
-            <UncontrolledDropdown nav inNavbar>
+            <UncontrolledDropdown nav inNavbar direction="right">
                 <DropdownToggle nav caret>
                     Cart
                 </DropdownToggle>
@@ -50,7 +51,7 @@ const CartSummery = () => {
                         ))
                     }
                     <DropdownItem divider />
-                    <DropdownItem><Link to={"/cart"}>Cart detail</Link></DropdownItem>
+                    <DropdownItem><Link to={"/cart"}>Cart detail</Link><span style={{"color": "blue", "marginLeft": 200}}>{totalSum}</span></DropdownItem>
                 </DropdownMenu>
             </UncontrolledDropdown>
         )

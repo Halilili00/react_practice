@@ -3,6 +3,7 @@ const states = {
     categories:[],
     products:[],
     cart:[],
+    totalSum:0,
 }
 
 export default states;

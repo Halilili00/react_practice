@@ -5,7 +5,8 @@ import { removeFromCart } from '../../redux/actions/cartActions';
 import alertify from 'alertifyjs';
 
 const CartDetail = () => {
-  const cart = useSelector(state => state.cartReducer);
+  const cart = useSelector(state => state.cartReducer.cart);
+  const total = useSelector(state => state.cartReducer.totalSum)
   const dispatch = useDispatch();
 
   const deleteItem = (cartItem) => {
@@ -39,6 +40,7 @@ const CartDetail = () => {
           ))}
         </tbody>
       </Table>
+      <h2>Cart sum: {total}</h2>
     </div>
   )
 }

@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 const ProductList = () => {
   const currenCategory = useSelector(state => state.changeCategoryReducer);
-  const products = useSelector(state => state.productListReducer);
+  const products = useSelector(state => state.productListReducer.products);
 
   const dispatch = useDispatch();
 

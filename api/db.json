@@ -18,7 +18,7 @@
       "categoryID": 2,
       "quantityPerUnit": "36 boxes",
       "unitPrice": 21.35,
-      "unitsInStock": "15",
+      "unitsInStock": "10",
       "unitsOnOrder": 0,
       "reorderLevel": 0,
       "discontinued": true,
@@ -955,6 +955,14 @@
       "quantityPerUnit": "100 g",
       "unitsInStock": "6",
       "id": 81
+    },
+    {
+      "categoryID": 1,
+      "name": "Cola",
+      "unitPrice": "2.99",
+      "quantityPerUnit": "500 ml",
+      "unitsInStock": "9",
+      "id": 82
     }
   ],
   "categories": [

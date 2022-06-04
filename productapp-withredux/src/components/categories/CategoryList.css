@@ -1,0 +1,21 @@
+.app_category {
+    display: block;
+}
+
+.app_category-smallscreen {
+    display: none;
+    width: 100%;
+}
+
+.badge_smallscreen {
+    width: 100%;
+}
+
+@media screen and (max-width: 800px){
+    .app_category {
+        display: none;
+    }
+    .app_category-smallscreen {
+        display: block;
+    }
+}

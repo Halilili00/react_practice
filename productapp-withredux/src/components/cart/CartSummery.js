@@ -12,6 +12,7 @@ import {
     Badge
 } from 'reactstrap';
 import { removeFromCart } from '../../redux/actions/cartActions';
+import './CartSummery.css'
 
 const CartSummery = () => {
     const cart = useSelector(state => state.cartReducer.cart)
@@ -40,18 +41,17 @@ const CartSummery = () => {
                 <DropdownToggle nav caret>
                     Cart
                 </DropdownToggle>
-                <DropdownMenu end>
+                <DropdownMenu end className='cart_dropdown-menu'>
                     {
                         cart.map(cartItem => (
                             <DropdownItem key={cartItem.product.id}>
                                 <Badge color='danger' onClick={() => deleteItem(cartItem)}>Delete</Badge>
-                                {cartItem.product.name}
-                                <Badge color='success'>{cartItem.quantity}</Badge>
+                                {cartItem.product.name} <Badge color='success'>{cartItem.quantity}</Badge>
                             </DropdownItem>
                         ))
                     }
                     <DropdownItem divider />
-                    <DropdownItem><Link to={"/cart"}>Cart detail</Link><span style={{"color": "blue", "marginLeft": 200}}>{totalSum}</span></DropdownItem>
+                    <DropdownItem><Link to={"/cart"}>Cart detail</Link><span className='totalsum'> {totalSum}</span></DropdownItem>
                 </DropdownMenu>
             </UncontrolledDropdown>
         )

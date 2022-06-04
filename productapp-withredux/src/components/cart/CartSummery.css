@@ -1,0 +1,14 @@
+.cart_dropdown-menu {
+    display: flex;
+    left: auto;
+    right: 0;
+}
+
+.totalsum {
+    color:blue;
+    float: right;
+}
+
+span {
+    margin-right: 10px;
+}

@@ -1,0 +1,18 @@
+.app_col {
+    display: block;
+    width: 100%;
+}
+
+.app_dasboard-smallscreen {
+    display: none;
+}
+
+@media screen and (max-width: 800px){
+    .app_col {
+        display: none;
+        width: 100%;
+    }
+    .app_dasboard-smallscreen {
+        display: block;
+    }
+}

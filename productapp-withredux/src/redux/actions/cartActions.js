@@ -7,3 +7,7 @@ export const addToCart = (cartItem) => {
 export const removeFromCart = (cartItem) => {
     return {type: actions.remove_from_cart, payload:cartItem}
 }
+
+export const decrementQuantity = (cartItem) => {
+    return {type: actions.decrement_quantity, payload:cartItem}
+}

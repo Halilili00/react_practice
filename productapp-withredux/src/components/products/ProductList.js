@@ -7,7 +7,7 @@ import { Table, Button } from 'reactstrap';
 import { addToCart } from '../../redux/actions/cartActions'
 import alertify from "alertifyjs";
 import { Link } from 'react-router-dom';
-import { AiFillStar, AiOutlineStar  } from "react-icons/ai";
+import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import './ProductList.css'
 
 const ProductList = () => {
@@ -21,12 +21,8 @@ const ProductList = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (currenCategory.length > 0) {
-      dispatch(getProducts(currenCategory));
-    } else {
-      dispatch(changeCategory(''))
-      dispatch(getProducts())
-    }
+    if (currenCategory)
+      dispatch(getProducts(currenCategory.categoryID));
   }, [])
 
   useEffect(() => {
@@ -75,7 +71,7 @@ const ProductList = () => {
           {products.map(product => (
             <tr key={product.id}>
               <th scope="row">{product.id}</th>
-              <td><Link to={"/add/" + product.id}>{product.name}</Link></td>
+              <td><Link to={"/add/" + product.id}>{product.productImage && (<img className='product_img' src={product.productImage} />)}</Link> <Link to={"/add/" + product.id}>{product.name}</Link></td>
               <td>{product.unitPrice}</td>
               <td>{product.quantityPerUnit}</td>
               <td>{product.unitsInStock}</td>

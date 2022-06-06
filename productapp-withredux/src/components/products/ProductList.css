@@ -2,3 +2,11 @@
     font-size: x-large;
     margin-top: 7px;
 }
+
+.product_img{
+    width: 40px;
+}
+
+.product_img:hover{
+    width: 200px;
+}

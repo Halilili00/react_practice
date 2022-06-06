@@ -51,7 +51,7 @@ const CartSummery = () => {
                         ))
                     }
                     <DropdownItem divider />
-                    <DropdownItem><Link to={"/cart"}>Cart detail</Link><span className='totalsum'> {totalSum}</span></DropdownItem>
+                    <DropdownItem><Link to={"/cart"}>Cart detail</Link><span className='totalsum'> {totalSum.toFixed(2)}</span></DropdownItem>
                 </DropdownMenu>
             </UncontrolledDropdown>
         )

@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Badge } from 'reactstrap'
-import { getProducts } from '../../redux/actions/productActions'
-import { changeCategory } from '../../redux/actions/categoryActions'
 import { Table, Button } from 'reactstrap';
 import { addToCart } from '../../redux/actions/cartActions'
 import alertify from "alertifyjs";
@@ -19,11 +17,6 @@ const ProductList = () => {
   })
 
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    if (currenCategory)
-      dispatch(getProducts(currenCategory.categoryID));
-  }, [])
 
   useEffect(() => {
     localStorage.setItem('favorites', JSON.stringify(favorite))
@@ -71,7 +64,7 @@ const ProductList = () => {
           {products.map(product => (
             <tr key={product.id}>
               <th scope="row">{product.id}</th>
-              <td><Link to={"/add/" + product.id}>{product.productImage && (<img className='product_img' src={product.productImage} />)}</Link> <Link to={"/add/" + product.id}>{product.name}</Link></td>
+              <td><Link to={"/add/" + product.id}>{product.productImage && (<img alt='product img' className='product_img' src={product.productImage} />)}</Link> <Link to={"/add/" + product.id}>{product.name}</Link></td>
               <td>{product.unitPrice}</td>
               <td>{product.quantityPerUnit}</td>
               <td>{product.unitsInStock}</td>

@@ -37,7 +37,7 @@ const CartDetail = () => {
           {cart.map(cartItem => (
             <tr key={cartItem.product.id}>
               <th scope="row">{cartItem.product.id}</th>
-              <td>{cartItem.product.productImage && (<img className='product_img' src={cartItem.product.productImage} />)} {cartItem.product.name}</td>
+              <td>{cartItem.product.productImage && (<img alt='product img' className='product_img' src={cartItem.product.productImage} />)} {cartItem.product.name}</td>
               <td>{cartItem.product.unitPrice}</td>
               <td>{cartItem.quantity}</td>
               <td>

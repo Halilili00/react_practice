@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Badge, ListGroup, ListGroupItem } from 'reactstrap'
-import { changeCategory, getCategories } from '../../redux/actions/categoryActions'
+import { changeCategory } from '../../redux/actions/categoryActions'
 import { getProducts } from '../../redux/actions/productActions'
 import './CategoryList.css'
 
@@ -10,10 +10,6 @@ const CategoryList = () => {
     const categories = useSelector((state) => state.categoryListReducer);
     const [isOpen, setIsOpen] = useState(false);
     const dispatch = useDispatch();
-
-    useEffect(() => {
-        dispatch(getCategories());
-    }, [])
 
     const selectCategory = (category) => {
         dispatch(changeCategory(category))

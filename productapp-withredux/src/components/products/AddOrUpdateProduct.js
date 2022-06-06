@@ -85,7 +85,7 @@ const AddOrUpdateProduct = () => {
                 </Button>
                 <br />
                 {postProduct.productImage && (
-                    <img src={postProduct.productImage} />)}
+                    <img alt='Added img' src={postProduct.productImage} />)}
             </Form>
         </div>
     )

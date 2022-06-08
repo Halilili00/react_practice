@@ -12,11 +12,17 @@ export const updateProductSuccess = (product) => {
     return { type: actions.update_product_success, payload: product }
 }
 
-export const getProducts = (categotyId) => {
+export const getProducts = (categotyId, sort) => {
     return (dispatch) => {
-        let url = "http://localhost:3000/products"
-        if (categotyId) {
-            url = url + "?categoryID=" + categotyId;
+        let url = "http://localhost:3000/products?_sort=id"
+        if (sort) {
+            url = "http://localhost:3000/products?_sort=" + sort;
+            if (categotyId) {
+                url = url + "&&categoryID=" + categotyId;
+            }
+        }
+        else if (categotyId) {
+            url = url + "&&categoryID=" + categotyId;
         }
         fetch(url).then(response => response.json())
             .then(data => dispatch(getProductsSuccess(data)))

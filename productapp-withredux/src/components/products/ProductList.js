@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Badge } from 'reactstrap'
-import { Table, Button } from 'reactstrap';
+import { Badge, Col, Row, Table, Button, ListGroup, ListGroupItem } from 'reactstrap'
 import { addToCart } from '../../redux/actions/cartActions'
 import alertify from "alertifyjs";
 import { Link } from 'react-router-dom';
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
+import { BiSortAlt2 } from "react-icons/bi";
 import './ProductList.css'
+import { getProducts } from '../../redux/actions/productActions'
 
 const ProductList = () => {
   const currenCategory = useSelector(state => state.changeCategoryReducer);
@@ -15,8 +16,13 @@ const ProductList = () => {
     const localData = localStorage.getItem('favorites');
     return localData ? JSON.parse(localData) : [];
   })
+  const [isOpen, setIsOpen] = useState(false);
 
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   useEffect(() => {
     localStorage.setItem('favorites', JSON.stringify(favorite))
@@ -37,17 +43,28 @@ const ProductList = () => {
     alertify.warning("Deleted from favorites")
   }
 
+  const selectSort = (sort) => {
+    dispatch(getProducts(currenCategory.categoryID, sort))
+  }
+
   return (
     <div>
-      <h3>
-        <Badge color='warning'>
-          Products
-        </Badge>
-        -
-        <Badge>
-          {currenCategory.name}
-        </Badge>
-      </h3>
+      <Row>
+        <Col xs={8}>
+          {currenCategory
+            ? <h3><Badge color='warning'>Products</Badge>-<Badge>{currenCategory.name}</Badge></h3>
+            : <h3><Badge color='warning'>Products</Badge></h3>}
+        </Col>
+        <Col xs={4}>
+          <Button className='short_button' onClick={() => setIsOpen(!isOpen)}><span>sort by: </span><BiSortAlt2 className='sort_icon'/></Button>
+          {isOpen && (
+            <ListGroup>
+              <ListGroupItem className='Sort_listItem' onClick={() => {selectSort('unitPrice'); setIsOpen(!isOpen)}}>Price: Low to High</ListGroupItem>
+              <ListGroupItem className='Sort_listItem' onClick={() => {selectSort('unitPrice&_order=desc'); setIsOpen(!isOpen)}}>Price: High to Low</ListGroupItem>
+            </ListGroup>
+          )}
+        </Col>
+      </Row>
       <Table>
         <thead>
           <tr>
@@ -80,7 +97,7 @@ const ProductList = () => {
           ))}
         </tbody>
       </Table>
-    </div>
+    </div >
   )
 }
 

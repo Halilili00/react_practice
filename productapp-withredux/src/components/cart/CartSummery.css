@@ -7,8 +7,5 @@
 .totalsum {
     color:blue;
     float: right;
-}
-
-span {
-    margin-right: 10px;
+    margin-right: 0px;
 }

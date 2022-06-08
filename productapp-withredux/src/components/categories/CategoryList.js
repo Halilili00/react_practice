@@ -4,6 +4,7 @@ import { Badge, ListGroup, ListGroupItem } from 'reactstrap'
 import { changeCategory } from '../../redux/actions/categoryActions'
 import { getProducts } from '../../redux/actions/productActions'
 import './CategoryList.css'
+import { HiMenu } from "react-icons/hi";
 
 const CategoryList = () => {
     const currenCategory = useSelector(state => state.changeCategoryReducer);
@@ -21,6 +22,7 @@ const CategoryList = () => {
             <div className='app_category'>
                 <h3>
                     <Badge color='success'>Categories</Badge>
+
                 </h3>
                 <ListGroup>
                     {categories && categories.map(category => (
@@ -42,7 +44,7 @@ const CategoryList = () => {
             </div>
             <div className='app_category-smallscreen'>
                 <h3>
-                    <Badge className='badge_smallscreen' color='success' onClick={() => setIsOpen(!isOpen)}>Categories</Badge>
+                    <Badge className='badge_smallscreen' color='success' onClick={() => setIsOpen(!isOpen)}><span className='category'>Categories</span><HiMenu className="categoty_icon"/></Badge>
                 </h3>
                 {isOpen && (
                     <ListGroup>
